@@ -10,7 +10,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-            checkout([$class: 'GitSCM', branches: [[name: '*/master']], extensions: [], doGenerateSubmoduleConfigurations: false,extensions: [[$class:'CheckoutOption',timeout:30],[$class:'CloneOption',depth:0,noTags:false,reference:'',shallow:false,timeout:30]], submoduleCfg: [], userRemoteConfigs: [[url: 'https://github.com/naveenkumarhn/aws-cicd']]])            
+            checkout([$class: 'GitSCM', branches: [[name: '*/master']], extensions: [], submoduleCfg: [], userRemoteConfigs: [[url: 'https://github.com/naveenkumarhn/aws-cicd']]])            
 
           }
         }
